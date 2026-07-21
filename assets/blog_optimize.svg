@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blog2-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#blog2-grad)" />
+  <!-- Speed lines -->
+  <line x1="20" y1="210" x2="100" y2="210" stroke="rgba(16, 185, 129, 0.1)" stroke-width="4" stroke-linecap="round" />
+  <line x1="40" y1="190" x2="150" y2="190" stroke="rgba(16, 185, 129, 0.1)" stroke-width="2" stroke-linecap="round" />
+  <line x1="10" y1="170" x2="80" y2="170" stroke="rgba(16, 185, 129, 0.05)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Speed Gauge Dashboard graphic -->
+  <g transform="translate(200, 140)">
+    <!-- Outer Track -->
+    <path d="M-80 0 A 80 80 0 0 1 80 0" fill="none" stroke="#1f2937" stroke-width="14" stroke-linecap="round" />
+    <!-- Gradient Fill Track (representing high speed) -->
+    <path d="M-80 0 A 80 80 0 0 1 60 -53" fill="none" stroke="url(#gauge-grad)" stroke-width="14" stroke-linecap="round" />
+    
+    <!-- Central Hub -->
+    <circle cx="0" cy="0" r="15" fill="#1e293b" stroke="#f8fafc" stroke-width="3" />
+    
+    <!-- Indicator Arrow pointing to 100% green zone -->
+    <line x1="0" y1="0" x2="52" y2="-45" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" />
+    <polygon points="50,-47 58,-40 46,-38" fill="#f8fafc" />
+
+    <!-- Performance text status -->
+    <text x="0" y="35" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="28" fill="#10b981" text-anchor="middle">
+      99%
+    </text>
+    <text x="0" y="55" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">
+      PERFORMANCE
+    </text>
+  </g>
+</svg>

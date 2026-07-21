@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="proj2-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#proj2-grad)" />
+  <!-- Grid -->
+  <g stroke="rgba(255,255,255,0.02)" stroke-width="1">
+    <line x1="50" y1="0" x2="50" y2="250" />
+    <line x1="100" y1="0" x2="100" y2="250" />
+    <line x1="150" y1="0" x2="150" y2="250" />
+    <line x1="200" y1="0" x2="200" y2="250" />
+    <line x1="250" y1="0" x2="250" y2="250" />
+    <line x1="300" y1="0" x2="300" y2="250" />
+    <line x1="350" y1="0" x2="350" y2="250" />
+  </g>
+  <!-- Storefront UI -->
+  <rect x="25" y="25" width="350" height="200" rx="8" fill="#1f2937" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+  <!-- Navbar -->
+  <rect x="25" y="25" width="350" height="35" rx="8" fill="#111827" />
+  <text x="45" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#ec4899">THRE4D</text>
+  <circle cx="340" cy="42" r="8" fill="url(#rose-grad)" />
+  <!-- Shopping cart icon inside nav -->
+  <path d="M336 39 h6 l2 5 h-8 z M337 44 h5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" fill="none" />
+  
+  <!-- Product Grid -->
+  <!-- Product 1 -->
+  <rect x="45" y="75" width="90" height="130" rx="6" fill="#111827" />
+  <rect x="52" y="82" width="76" height="70" rx="4" fill="#374151" />
+  <!-- T-shirt vector outline -->
+  <path d="M72 92 h36 l4 10-6 3-4-5v25h-20v-25l-4 5-6-3 z" fill="url(#rose-grad)" opacity="0.8" />
+  <rect x="55" y="162" width="55" height="6" rx="3" fill="rgba(255,255,255,0.2)" />
+  <rect x="55" y="172" width="30" height="6" rx="3" fill="#ec4899" />
+  <circle cx="120" cy="188" r="6" fill="#ec4899" />
+
+  <!-- Product 2 -->
+  <rect x="155" y="75" width="90" height="130" rx="6" fill="#111827" />
+  <rect x="162" y="82" width="76" height="70" rx="4" fill="#374151" />
+  <!-- Hooded sweater vector -->
+  <path d="M182 95 h36 l4 12-6 3-3-6-1 22h-18l-1-22-3 6-6-3 z M194 91 h12 v3 h-12 z" fill="#38bdf8" opacity="0.8" />
+  <rect x="165" y="162" width="60" height="6" rx="3" fill="rgba(255,255,255,0.2)" />
+  <rect x="165" y="172" width="35" height="6" rx="3" fill="#38bdf8" />
+  <circle cx="230" cy="188" r="6" fill="#38bdf8" />
+
+  <!-- Product 3 -->
+  <rect x="265" y="75" width="90" height="130" rx="6" fill="#111827" />
+  <rect x="272" y="82" width="76" height="70" rx="4" fill="#374151" />
+  <!-- Cap vector -->
+  <path d="M295 105 a15 15 0 0 1 30 0 h-30 z M300 105 h35 v3 h-35 z" fill="#f59e0b" opacity="0.8" />
+  <rect x="275" y="162" width="50" height="6" rx="3" fill="rgba(255,255,255,0.2)" />
+  <rect x="275" y="172" width="25" height="6" rx="3" fill="#f59e0b" />
+  <circle cx="340" cy="188" r="6" fill="#f59e0b" />
+</svg>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Chào mừng đến với Blog cá nhân của tôi",
+    "excerpt": "Bài viết đầu tiên chia sẻ về lý do tôi xây dựng không gian này, các công nghệ sử dụng và những dự định trong tương lai.",
+    "date": "2026-07-21",
+    "category": "Chia Sẻ",
+    "readTime": "3 phút",
+    "thumbnail": "assets/blog_intro.svg",
+    "filePath": "posts/hello-world.md"
+  },
+  {
+    "id": "bi-quyet-optimize-website",
+    "title": "Bí quyết tối ưu hóa tốc độ tải trang Web tĩnh",
+    "excerpt": "Tại sao tốc độ tải trang lại quan trọng đối với trải nghiệm người dùng và SEO? Khám phá 5 phương pháp tối ưu hóa hiệu quả cho website tĩnh.",
+    "date": "2026-06-15",
+    "category": "Lập Trình",
+    "readTime": "6 phút",
+    "thumbnail": "assets/blog_optimize.svg",
+    "filePath": "posts/optimize-website.md"
+  }
+]
