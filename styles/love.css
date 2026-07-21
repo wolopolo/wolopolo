@@ -1,0 +1,510 @@
+/* Romantic Theme / Love Zone Styles */
+
+/* Base Styles & Typography for Love Mode */
+body.theme-love {
+  background-image: radial-gradient(circle at 10% 20%, rgba(255, 230, 235, 0.4) 0%, rgba(255, 245, 245, 0.4) 90%);
+}
+
+body.theme-love .section-title {
+  font-family: var(--font-romantic);
+  font-style: italic;
+  font-size: 2.6rem;
+  color: var(--accent-primary);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+body.theme-love .section-title::after {
+  content: ' 💖';
+  font-style: normal;
+}
+
+/* Anniversary Counter */
+.love-counter-wrapper {
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: var(--border-radius-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 240, 243, 0.8));
+  border: 1px solid rgba(244, 63, 94, 0.15);
+  box-shadow: 0 15px 40px -10px rgba(225, 29, 72, 0.12);
+}
+
+.love-counter-title {
+  font-family: var(--font-romantic);
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.love-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.love-counter-box {
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(244, 63, 94, 0.08);
+  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.03);
+}
+
+.love-counter-box .number {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  line-height: 1.1;
+}
+
+.love-counter-box .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.love-counter-footer {
+  font-family: var(--font-romantic);
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Interactive Envelope */
+.love-envelope-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.envelope-wrapper {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  background-color: #f43f5e;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 15px 35px rgba(225, 29, 72, 0.15);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.4s ease;
+}
+
+.envelope-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Open flap (top) */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 100px solid #e11d48;
+  transform-origin: top;
+  transition: transform 0.4s ease 0.2s, z-index 0.2s ease 0.2s;
+  z-index: 5;
+}
+
+/* Front folding parts */
+.envelope-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 90px solid #f43f5e;
+  border-top: 90px solid transparent;
+  z-index: 6;
+}
+
+.envelope-front-sides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+}
+
+.envelope-front-sides::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 140px solid #ec4899;
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  border-radius: 0 0 0 12px;
+}
+
+.envelope-front-sides::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 140px solid #ec4899;
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  border-radius: 0 0 12px 0;
+}
+
+/* The Letter inside */
+.envelope-letter {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 250px;
+  height: 150px;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  z-index: 2;
+  transition: transform 0.4s ease 0.1s, z-index 0.1s ease;
+  overflow: hidden;
+}
+
+.envelope-letter-text {
+  font-family: var(--font-romantic);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #3f2b2f;
+  text-align: center;
+}
+
+.envelope-letter-heart {
+  font-size: 1.5rem;
+  color: #e11d48;
+  margin-top: 10px;
+  text-align: center;
+  animation: heartbeat 1s infinite alternate;
+}
+
+/* Seal Wax (Sticker) */
+.envelope-seal {
+  position: absolute;
+  top: 80px;
+  left: 125px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.envelope-seal::after {
+  content: '❤';
+  color: #e11d48;
+}
+
+/* Envelope Opening State */
+.envelope-wrapper.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope-wrapper.open .envelope-letter {
+  transform: translateY(-110px);
+  height: 250px;
+  z-index: 9;
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.1);
+}
+
+.envelope-wrapper.open .envelope-seal {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* Memory Timeline */
+.love-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.love-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary), transparent);
+}
+
+.love-timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.love-timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.love-timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 4px solid var(--accent-primary);
+  box-shadow: 0 0 10px rgba(225, 29, 72, 0.2);
+  z-index: 2;
+}
+
+.love-timeline-content {
+  width: 45%;
+  padding: 24px;
+}
+
+.love-timeline-date {
+  display: inline-block;
+  font-family: var(--font-romantic);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.love-timeline-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.love-timeline-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Polaroid Gallery */
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.polaroid-card {
+  background-color: #ffffff;
+  padding: 16px 16px 24px 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Rotate cards randomly to look organic */
+.polaroid-card:nth-child(3n+1) { transform: rotate(-2deg); }
+.polaroid-card:nth-child(3n+2) { transform: rotate(1.5deg); }
+.polaroid-card:nth-child(3n+3) { transform: rotate(-1deg); }
+
+.polaroid-card:hover {
+  transform: scale(1.05) rotate(0deg) translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(225, 29, 72, 0.1);
+  z-index: 10;
+}
+
+.polaroid-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.polaroid-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.polaroid-caption {
+  font-family: var(--font-romantic);
+  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
+  color: #3f2b2f;
+  font-weight: 600;
+  display: block;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(63, 43, 47, 0.9);
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 6px solid #ffffff;
+}
+
+.lightbox-caption {
+  font-family: var(--font-romantic);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Floating particle heart styles */
+.floating-heart {
+  position: fixed;
+  font-size: 1.5rem;
+  pointer-events: none;
+  z-index: 9999;
+  animation: float-heart 3s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .love-counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .love-counter-box .number {
+    font-size: 2.2rem;
+  }
+  
+  .love-timeline::before {
+    left: 20px;
+  }
+  
+  .love-timeline-item {
+    flex-direction: row !important;
+    margin-bottom: 40px;
+  }
+  
+  .love-timeline-dot {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+  
+  .love-timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 40px;
+    padding: 16px;
+  }
+}
+
+/* Floating Music Button */
+.love-music-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1100;
+  display: none; /* Controlled by routing in JS */
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.15);
+  transition: all 0.3s ease;
+}
+
+body.theme-love .love-music-btn {
+  display: flex; /* Only show in Love Zone */
+}
+
+.love-music-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.25);
+}
+
+.love-music-btn.playing {
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.love-music-btn.playing .music-icon {
+  animation: rotate-music 4s linear infinite;
+}
+
+@keyframes rotate-music {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

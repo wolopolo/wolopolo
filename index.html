@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website cá nhân của wolopolo - Portfolio, Blog chia sẻ kỹ thuật và Góc kỷ niệm yêu thương đầy ý nghĩa.">
+  <title>wolopolo | Personal Space</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <link rel="stylesheet" href="styles/blog.css">
+  <link rel="stylesheet" href="styles/love.css">
+</head>
+<body>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#portfolio" class="nav-logo">
+          wolopolo<span>.dev</span>
+        </a>
+        
+        <!-- Navigation Menu Links -->
+        <ul class="nav-links">
+          <li class="nav-link active" data-tab="portfolio"><a href="#portfolio">Hồ Sơ Cá Nhân</a></li>
+          <li class="nav-link" data-tab="blog"><a href="#blog">Bài Viết</a></li>
+          <li class="nav-link love-tab-link" data-tab="love">
+            <a href="#love">
+              Love Zone <span class="heart-icon">❤️</span>
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Navbar Settings controls -->
+        <div class="nav-controls">
+          <!-- Professional theme switcher (light/dark) -->
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <!-- Moon Icon (Dark Mode active default, click for light mode) -->
+            <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10C2.2 6.8 6.5 2.5 12 2.2c.4 0 .7.2.9.5.2.3.2.7 0 1-1.3 1.8-2 4-2 6.3 0 4.6 3.7 8.3 8.3 8.3 2.3 0 4.5-.7 6.3-2 .3-.2.7-.2 1 0 .3.2.5.5.5.9-.3 5.5-4.6 9.8-10.7 9.8zm-5.8-10c0 3.9 3.1 7 7 7 2.2 0 4.2-1 5.6-2.7-2.6-.6-4.6-2.9-4.6-5.8 0-2.9 2-5.2 4.6-5.8-1.4-1.7-3.4-2.7-5.6-2.7-3.9 0-7 3.1-7 7z"/>
+            </svg>
+            <!-- Sun Icon -->
+            <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm0-10c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .6.4 1 1 1zm0 14c-.6 0-1 .4-1 1v1c0 .6.4 1 1 1s1-.4 1-1v-1c0-.6-.4-1-1-1zm-7-7c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1s.4 1 1 1h1c.6 0 1-.4 1-1zm14 0c0-.6-.4-1-1-1h-1c-.6 0-1 .4-1 1s.4 1 1 1h1c.6 0 1-.4 1-1zM5.6 5.6c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-.7.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l.7-.7zm14.2 11.4c-.4-.4-1-.4-1.4 0l-.7.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l.7-.7c.4-.4.4-1 0-1.4zm-14.2 1.4c.4.4 1 .4 1.4 0l.7-.7c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-.7.7c-.4.4-.4 1 0 1.4zm14.2-12.8c-.4-.4-1-.4-1.4 0l-.7.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l.7-.7c.4-.4.4-1 0-1.4z"/>
+            </svg>
+          </button>
+          
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Views -->
+    <main>
+      
+      <!-- VIEW 1: PORTFOLIO (HỒ SƠ CÁ NHÂN) -->
+      <section id="portfolio" class="page-section active">
+        <!-- Hero Section -->
+        <div class="container">
+          <div class="hero-section">
+            <div class="hero-content">
+              <span class="badge-glow">Software Engineer</span>
+              <h1 class="hero-title">Xin chào, tôi là <span class="name">wolopolo</span></h1>
+              <div class="typewriter">
+                <span id="typewriter-text"></span>
+                <span class="typewriter-cursor"></span>
+              </div>
+              <p class="hero-desc">
+                Tôi là một kỹ sư phần mềm tập trung vào xây dựng các ứng dụng web tối ưu hiệu năng, giao diện tinh tế và trải nghiệm người dùng ấn tượng.
+              </p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Liên hệ tôi</a>
+                <a href="#blog" class="btn btn-secondary">Xem bài viết</a>
+              </div>
+            </div>
+            
+            <div class="hero-img-container">
+              <div class="hero-img-wrapper">
+                <!-- Profile Image -->
+                <img src="assets/avatar.svg" alt="wolopolo Profile Picture">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="container" style="padding-top: 20px;">
+          <h2 class="section-title">Kỹ Năng</h2>
+          <p class="section-subtitle">Công cụ và công nghệ mà tôi sử dụng hàng ngày để hiện thực hóa các ý tưởng.</p>
+          
+          <div class="skills-container">
+            <!-- Frontend Card -->
+            <div class="skills-card glass-card">
+              <h3 class="skills-card-title">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                Frontend Development
+              </h3>
+              <div class="skills-list">
+                <span class="skill-chip">HTML5 / CSS3</span>
+                <span class="skill-chip">JavaScript (ES6+)</span>
+                <span class="skill-chip">React / Next.js</span>
+                <span class="skill-chip">Vue.js / Nuxt</span>
+                <span class="skill-chip">Tailwind CSS</span>
+                <span class="skill-chip">Responsive Web Design</span>
+              </div>
+            </div>
+
+            <!-- Backend Card -->
+            <div class="skills-card glass-card">
+              <h3 class="skills-card-title">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+                Backend & Database
+              </h3>
+              <div class="skills-list">
+                <span class="skill-chip">Node.js (Express)</span>
+                <span class="skill-chip">Python (FastAPI)</span>
+                <span class="skill-chip">SQL (PostgreSQL)</span>
+                <span class="skill-chip">NoSQL (MongoDB)</span>
+                <span class="skill-chip">RESTful APIs</span>
+                <span class="skill-chip">GraphQL</span>
+              </div>
+            </div>
+
+            <!-- Tools Card -->
+            <div class="skills-card glass-card">
+              <h3 class="skills-card-title">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                DevOps & Khác
+              </h3>
+              <div class="skills-list">
+                <span class="skill-chip">Git / GitHub</span>
+                <span class="skill-chip">Docker</span>
+                <span class="skill-chip">CI/CD Pipeline</span>
+                <span class="skill-chip">AWS Cloud Services</span>
+                <span class="skill-chip">Linux Command Line</span>
+                <span class="skill-chip">Agile / Scrum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Timeline Section -->
+        <div class="container">
+          <h2 class="section-title">Kinh Nghiệm Làm Việc</h2>
+          <p class="section-subtitle">Chặng đường phát triển và tích lũy kinh nghiệm trong sự nghiệp lập trình.</p>
+          
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 - Hiện Tại</div>
+              <div class="timeline-card glass-card">
+                <h4>Kỹ sư Frontend Cấp cao</h4>
+                <div class="timeline-company">TechVibe Software Solutions</div>
+                <p class="timeline-desc">
+                  Chịu trách nhiệm kiến trúc lại cấu trúc giao diện ứng dụng quản lý doanh nghiệp, cải thiện 35% tốc độ tải trang bằng kỹ thuật lazy-loading và tối ưu CSS. Dẫn dắt đội ngũ 4 lập trình viên triển khai dự án thương mại điện tử lớn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2022 - 2024</div>
+              <div class="timeline-card glass-card">
+                <h4>Lập trình viên Fullstack</h4>
+                <div class="timeline-company">InnoGen Tech</div>
+                <p class="timeline-desc">
+                  Phát triển và bảo trì cả Client-side (React) và Server-side (Node.js/PostgreSQL) cho nền tảng đặt phòng. Thiết kế các API RESTful bảo mật và tối ưu truy vấn dữ liệu SQL giúp giảm thời gian phản hồi máy chủ 20%.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2021 - 2022</div>
+              <div class="timeline-card glass-card">
+                <h4>Lập trình viên Thực tập</h4>
+                <div class="timeline-company">DevLab Academy</div>
+                <p class="timeline-desc">
+                  Tham gia học tập và hỗ trợ phát triển các module giao diện mẫu (HTML/CSS/JS) cho khách hàng. Xây dựng nền tảng tư duy lập trình vững chắc và rèn luyện kỹ năng làm việc nhóm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected Projects Section -->
+        <div class="container">
+          <h2 class="section-title">Dự Án Tiêu Biểu</h2>
+          <p class="section-subtitle">Những sản phẩm phần mềm tôi đã thiết kế và lập trình hoàn chỉnh.</p>
+          
+          <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card glass-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project1.svg" alt="Dự án Dashboard Quản trị">
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <h4 class="project-title">Athena Admin Dashboard</h4>
+                  <p class="project-desc">Nền tảng quản lý thông số dữ liệu cho hệ thống SaaS doanh nghiệp, hỗ trợ trực quan hóa biểu đồ và xuất báo cáo tự động.</p>
+                </div>
+                <div>
+                  <div class="project-tags">
+                    <span class="project-tag">Next.js</span>
+                    <span class="project-tag">ChartJS</span>
+                    <span class="project-tag">PostgreSQL</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      Mã Nguồn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card glass-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project2.svg" alt="Dự án Sàn Thương mại Điện tử">
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <h4 class="project-title">Urban Thread Store</h4>
+                  <p class="project-desc">Trang thương mại điện tử mua sắm thời trang tối giản, tích hợp cổng thanh toán Stripe và quản lý kho hàng realtime.</p>
+                </div>
+                <div>
+                  <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Redux Toolkit</span>
+                    <span class="project-tag">Stripe API</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      Mã Nguồn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card glass-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project3.svg" alt="Ứng dụng Chat Realtime">
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <h4 class="project-title">Halo Chat App</h4>
+                  <p class="project-desc">Ứng dụng nhắn tin tức thời bảo mật, hỗ trợ chat nhóm, gửi tệp và chia sẻ biểu cảm trực tiếp thời gian thực.</p>
+                </div>
+                <div>
+                  <div class="project-tags">
+                    <span class="project-tag">HTML5/JS</span>
+                    <span class="project-tag">WebSockets</span>
+                    <span class="project-tag">MongoDB</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      Mã Nguồn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="container">
+          <h2 class="section-title">Kết Nối Với Tôi</h2>
+          <p class="section-subtitle">Bạn có dự án cần phát triển hay cơ hội hợp tác nghề nghiệp? Hãy gửi thư cho tôi nhé!</p>
+          
+          <div class="contact-container">
+            <!-- Contact Card Info -->
+            <div class="contact-info">
+              <div class="contact-card glass-card">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Email</h5>
+                    <p>contact@wolopolo.github.io</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Điện Thoại</h5>
+                    <p>+84 987 654 321</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></circle><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Địa Chỉ</h5>
+                    <p>Hà Nội, Việt Nam</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-card glass-card">
+              <form id="contact-form" onsubmit="event.preventDefault(); alert('Cảm ơn tin nhắn của bạn! Tôi sẽ phản hồi sớm nhất có thể.');">
+                <div class="form-group">
+                  <label for="form-name">Họ và tên</label>
+                  <input type="text" id="form-name" class="form-control" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Địa chỉ Email</label>
+                  <input type="email" id="form-email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-message">Nội dung liên hệ</label>
+                  <textarea id="form-message" class="form-control" placeholder="Tôi muốn trao đổi về dự án..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%">Gửi Tin Nhắn</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2: BLOG (BÀI VIẾT) -->
+      <section id="blog" class="page-section">
+        <div class="container">
+          
+          <!-- Grid Feed listing view -->
+          <div id="blog-list-view">
+            <h2 class="section-title">Kho Lưu Trữ Bài Viết</h2>
+            <p class="section-subtitle">Nơi lưu trữ các bài viết chia sẻ về công nghệ, lập trình và kinh nghiệm phát triển bản thân.</p>
+            
+            <!-- Toolbar for search & filters -->
+            <div class="blog-toolbar">
+              <div class="blog-search-wrapper">
+                <input type="text" id="blog-search" class="blog-search-input" placeholder="Tìm kiếm bài viết...">
+                <svg class="blog-search-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+              
+              <div id="blog-categories" class="blog-categories">
+                <!-- Javascript will load filters here: All, Technology, Career, Life... -->
+              </div>
+            </div>
+
+            <!-- Blog Post Cards Container -->
+            <div id="blog-list-container" class="blog-grid">
+              <!-- Rendered dynamically -->
+            </div>
+            
+            <!-- No post feedback display -->
+            <div id="blog-no-posts" class="blog-empty-state" style="display:none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+              <p>Không tìm thấy bài viết nào phù hợp với từ khóa.</p>
+            </div>
+          </div>
+
+          <!-- Dynamic Individual Post Reader View -->
+          <div id="blog-detail-view" class="blog-detail-view">
+            <!-- Details loaded dynamically from posts.json + file fetch -->
+            <div class="blog-detail-header">
+              <div id="blog-detail-back-btn" class="blog-detail-back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Quay lại bài viết
+              </div>
+              <span id="post-detail-category" class="blog-detail-category">Danh mục</span>
+              <h1 id="post-detail-title" class="blog-detail-title">Tiêu đề bài viết</h1>
+              <div id="post-detail-meta" class="blog-detail-meta">
+                <!-- Date, read time, etc. -->
+              </div>
+            </div>
+            
+            <!-- Markdown compiled HTML inject -->
+            <article id="post-detail-content" class="blog-post-content prose">
+              <!-- Content rendered here -->
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIEW 3: LOVE ZONE (GÓC KỶ NIỆM) -->
+      <section id="love" class="page-section">
+        <!-- Interactive particles canvas overlay -->
+        <canvas id="heart-particles"></canvas>
+        
+        <div class="container">
+          <h2 class="section-title">Happy Together</h2>
+          <p class="section-subtitle">Lưu giữ từng khoảnh khắc ngọt ngào, những kỷ niệm đẹp cùng người tôi yêu.</p>
+          
+          <!-- Live Anniversary Counter -->
+          <div class="love-counter-wrapper">
+            <h3 class="love-counter-title">Chúng tôi đã bên nhau được</h3>
+            <div class="love-counter-grid">
+              <div class="love-counter-box">
+                <div id="counter-days" class="number">00</div>
+                <div class="label">Ngày</div>
+              </div>
+              <div class="love-counter-box">
+                <div id="counter-hours" class="number">00</div>
+                <div class="label">Giờ</div>
+              </div>
+              <div class="love-counter-box">
+                <div id="counter-minutes" class="number">00</div>
+                <div class="label">Phút</div>
+              </div>
+              <div class="love-counter-box">
+                <div id="counter-seconds" class="number">00</div>
+                <div class="label">Giây</div>
+              </div>
+            </div>
+            <p class="love-counter-footer">Mỗi giây trôi qua đều là những kỉ niệm đáng trân trọng...</p>
+          </div>
+
+          <!-- Secret Letter / Envelope widget -->
+          <div class="love-envelope-container">
+            <h3 style="font-family: var(--font-romantic); font-style: italic; margin-bottom: 20px;">Gửi em, lá thư bí mật...</h3>
+            <div id="secret-envelope" class="envelope-wrapper">
+              <div class="envelope-flap"></div>
+              <div class="envelope-front"></div>
+              <div class="envelope-front-sides"></div>
+              <div class="envelope-seal"></div>
+              <div class="envelope-letter">
+                <div class="envelope-letter-text">
+                  Gửi bé iu,<br><br>
+                  Cảm ơn em đã luôn đồng hành, chia sẻ và mang lại niềm vui cho anh mỗi ngày. Chúc cho hành trình của chúng ta sẽ mãi bền chặt và đong đầy hạnh phúc. Yêu em thật nhiều! ❤️
+                </div>
+                <div class="envelope-letter-heart">💖</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory Milestones Timeline -->
+          <h3 style="font-family: var(--font-romantic); font-style: italic; font-size: 2rem; text-align: center; margin-top: 60px;">Cột Mốc Kỷ Niệm</h3>
+          <div class="love-timeline">
+            <!-- Timeline Node 1 -->
+            <div class="love-timeline-item">
+              <div class="love-timeline-dot"></div>
+              <div class="love-timeline-content glass-card">
+                <span class="love-timeline-date">20 Tháng 10, 2023</span>
+                <h4>Ngày đầu ta gặp nhau</h4>
+                <p>Một buổi chiều thu Hà Nội lãng mạn. Cuộc gặp gỡ tình cờ tại quán cà phê sách đã đặt nét bút đầu tiên cho câu chuyện tình yêu của hai đứa.</p>
+              </div>
+            </div>
+
+            <!-- Timeline Node 2 -->
+            <div class="love-timeline-item">
+              <div class="love-timeline-dot"></div>
+              <div class="love-timeline-content glass-card">
+                <span class="love-timeline-date">14 Tháng 2, 2024</span>
+                <h4>Valentine ngọt ngào đầu tiên</h4>
+                <p>Buổi tối lung linh dưới ánh nến tại nhà hàng nhỏ và lời tỏ tình chính thức vụng về nhưng ngập tràn chân thành được gửi đi và nhận lại cái gật đầu hạnh phúc.</p>
+              </div>
+            </div>
+
+            <!-- Timeline Node 3 -->
+            <div class="love-timeline-item">
+              <div class="love-timeline-dot"></div>
+              <div class="love-timeline-content glass-card">
+                <span class="love-timeline-date">15 Tháng 6, 2024</span>
+                <h4>Chuyến đi Đà Nẵng đầy ắp nắng gió</h4>
+                <p>Hành trình khám phá thành phố biển, ngắm hoàng hôn trên Cầu Rồng và lưu giữ những nụ cười rạng rỡ của tuổi trẻ bên nhau.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Polaroid Grid -->
+          <h3 style="font-family: var(--font-romantic); font-style: italic; font-size: 2rem; text-align: center; margin-top: 80px; margin-bottom: 20px;">Góc Ảnh Yêu Thương</h3>
+          <div id="love-gallery" class="polaroid-grid">
+            <!-- Polaroid 1 -->
+            <div class="polaroid-card" data-img="assets/love1.svg" data-caption="Nụ cười của em là ánh sáng của anh.">
+              <div class="polaroid-img-wrapper">
+                <img src="assets/love1.svg" alt="Ảnh kỷ niệm 1">
+              </div>
+              <span class="polaroid-caption">Smile! 😊</span>
+            </div>
+
+            <!-- Polaroid 2 -->
+            <div class="polaroid-card" data-img="assets/love2.svg" data-caption="Cùng ngắm hoàng hôn biển Đà Nẵng ấm áp.">
+              <div class="polaroid-img-wrapper">
+                <img src="assets/love2.svg" alt="Ảnh kỷ niệm 2">
+              </div>
+              <span class="polaroid-caption">Sunset Lovers 🌅</span>
+            </div>
+
+            <!-- Polaroid 3 -->
+            <div class="polaroid-card" data-img="assets/love3.svg" data-caption="Quán cà phê quen thuộc vào một chiều cuối tuần mưa.">
+              <div class="polaroid-img-wrapper">
+                <img src="assets/love3.svg" alt="Ảnh kỷ niệm 3">
+              </div>
+              <span class="polaroid-caption">Warm Coffee ☕</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 wolopolo. Xây dựng thủ công bằng HTML, CSS và JavaScript với ❤️.</p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox Modal container for gallery -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Lightbox Zoom">
+      <div id="lightbox-caption" class="lightbox-caption">Mô tả hình ảnh</div>
+    </div>
+  </div>
+
+  <!-- Romantic Background Music -->
+  <audio id="love-music" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Erik_Satie_-_Gymnopedie_No._1.mp3" loop></audio>
+  <button id="love-music-toggle" class="love-music-btn glass-card" aria-label="Toggle Music">
+    <svg class="music-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+    <span class="music-status">Bật nhạc</span>
+  </button>
+
+  <!-- JS Scripts -->
+  <!-- Marked Library for client-side Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Main entry application JS -->
+  <script src="scripts/app.js" type="module"></script>
+
+</body>
+</html>

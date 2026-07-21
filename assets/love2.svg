@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="40%" stop-color="#b91c1c" />
+      <stop offset="75%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+    <linearGradient id="sea-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c" opacity="0.8" />
+      <stop offset="40%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+  </defs>
+  <!-- Sky Background -->
+  <rect width="300" height="150" fill="url(#sky-grad)" />
+  
+  <!-- Setting Sun -->
+  <circle cx="150" cy="140" r="35" fill="#fef08a" filter="url(#glow)" />
+  
+  <!-- Sea water reflection -->
+  <rect y="150" width="300" height="100" fill="url(#sea-grad)" />
+  <!-- Wave streaks -->
+  <ellipse cx="150" cy="155" rx="55" ry="2" fill="#fef08a" opacity="0.6" />
+  <ellipse cx="130" cy="165" rx="40" ry="1.5" fill="#fef08a" opacity="0.4" />
+  <ellipse cx="170" cy="175" rx="30" ry="1.5" fill="#fef08a" opacity="0.3" />
+  
+  <!-- Coconut Tree silhouettes on side -->
+  <g fill="#1e1b4b">
+    <!-- Trunk -->
+    <path d="M280 250 Q260 190 270 130 Q273 130 275 130 Q265 190 283 250 Z" />
+    <!-- Leaves -->
+    <path d="M270 130 Q230 110 200 135 Q235 125 270 130" />
+    <path d="M270 130 Q240 135 220 160 Q248 143 270 130" />
+    <path d="M270 130 Q285 100 270 85 Q278 105 270 130" />
+    <path d="M270 130 Q305 110 310 135 Q295 125 270 130" />
+    <path d="M270 130 Q300 140 305 165 Q290 145 270 130" />
+  </g>
+  
+  <!-- Tiny silhouette of a couple on the shore -->
+  <path d="M60 190 q3-5 5-15 q2 2 4 0 q2 10 5 15 z" fill="#1e1b4b" />
+  <circle cx="65" cy="172" r="3.5" fill="#1e1b4b" />
+  <path d="M72 192 q3-5 5-14 q2 2 4 0 q2 9 5 14 z" fill="#1e1b4b" />
+  <circle cx="77" cy="175" r="3" fill="#1e1b4b" />
+  <!-- Heart between them -->
+  <path d="M71 165 q-2-2-3 0 L71 168 L74 165 Q73 163 71 165" fill="#f43f5e" />
+</svg>
