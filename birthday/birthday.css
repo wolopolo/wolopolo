@@ -202,12 +202,6 @@ body {
   min-height: 100vh;
   padding: 60px 16px;
   text-align: center;
-  animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 .wish-title {
@@ -218,13 +212,26 @@ body {
   margin-bottom: 24px;
 }
 
+.wish-title.visible {
+  animation: glow 3s ease-in-out 1s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 20px rgba(255, 150, 200, 0.7); }
+  50%      { text-shadow: 0 0 36px rgba(255, 170, 210, 1), 0 0 60px rgba(255, 120, 180, 0.5); }
+}
+
 .wish-message {
   max-width: 640px;
   margin: 0 auto 48px;
   font-size: 1.15rem;
   line-height: 1.8;
-  white-space: pre-line;
   opacity: 0.95;
+}
+
+.wish-message .line {
+  display: block;
+  min-height: 1.8em;
 }
 
 .gallery {
@@ -240,8 +247,6 @@ body {
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  animation: dropIn 0.7s ease forwards;
 }
 
 .photo:nth-child(odd)  { --tilt: -3deg; }
@@ -260,9 +265,47 @@ body {
   font-size: 0.95rem;
 }
 
-@keyframes dropIn {
-  from { opacity: 0; transform: translateY(-30px) rotate(0); }
-  to   { opacity: 1; transform: translateY(0) rotate(var(--tilt)); }
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.9s ease,
+    box-shadow 0.3s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.photo.reveal {
+  transform: translateY(70px) scale(0.9) rotate(0deg);
+}
+
+.photo.reveal.visible {
+  transform: rotate(var(--tilt));
+}
+
+.photo.reveal.visible:hover {
+  transition-delay: 0s;
+  transform: translateY(-8px) scale(1.04) rotate(0deg);
+  box-shadow: 0 16px 40px rgba(255, 150, 200, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .photo.reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }
 
 /* ---------- Confetti ---------- */

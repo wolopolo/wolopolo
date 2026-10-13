@@ -33,12 +33,37 @@ function createStars() {
   }
 }
 
+function renderMessage() {
+  const message = document.getElementById("wishMessage");
+  WISH_MESSAGE.split(/\r?\n/).forEach((text, i) => {
+    const line = document.createElement("span");
+    line.className = "line reveal";
+    line.style.setProperty("--delay", 0.3 + i * 0.2 + "s");
+    line.textContent = text;
+    message.appendChild(line);
+  });
+}
+
+// Fade elements in as they scroll into view
+function observeReveals() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+
+  wishStage.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+}
+
 function renderGallery() {
   const gallery = document.getElementById("gallery");
   PHOTOS.forEach((photo, i) => {
     const figure = document.createElement("figure");
-    figure.className = "photo";
-    figure.style.animationDelay = 0.6 + i * 0.25 + "s";
+    figure.className = "photo reveal";
+    figure.style.setProperty("--delay", (i % 3) * 0.15 + "s");
 
     const img = document.createElement("img");
     img.src = photo.src;
@@ -125,9 +150,10 @@ cake.addEventListener("click", () => {
 
   setTimeout(() => {
     cakeStage.hidden = true;
-    document.getElementById("wishMessage").textContent = WISH_MESSAGE;
+    renderMessage();
     renderGallery();
     wishStage.hidden = false;
+    observeReveals();
     launchConfetti();
   }, 400);
 }, { once: true });
